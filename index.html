@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Primer Informe DT</title>
+
+  <!-- Fuente elegante -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&family=Allura&display=swap" rel="stylesheet">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- JS -->
+  <script src="scripts.js" defer></script>
+</head>
+
+<body class="bg-base text-base-text">
+
+  <!-- ========================================================= -->
+  <!-- HEADER -->
+  <!-- ========================================================= -->
+  <header id="hero" class="relative w-full h-screen flex items-center justify-center overflow-hidden">
+
+    <!-- VIDEO DE FONDO -->
+    <video id="heroVideo" class="absolute inset-0 w-full h-full object-cover" autoplay muted loop playsinline>
+      <source src="video/vid1.mp4" type="video/mp4">
+    </video>
+
+    <!-- OVERLAY -->
+    <div class="absolute inset-0 bg-black/60"></div>
+
+    <!-- IMAGEN LATERAL -->
+    <img id="heroImg" class="absolute left-0 bottom-0 h-full object-cover hero-img"
+         src="img/3.jpg" alt="Diputada Migrante" />
+
+    <!-- CONTENIDO CENTRADO -->
+    <div class="relative flex flex-col items-center text-center px-4">
+      <h1 class="text-white text-5xl md:text-7xl font-bold drop-shadow-lg leading-tight">
+        Primer Informe<br>
+        <span class="font-playfair italic font-semibold thin-script">
+          Dolores Trejo – Diputada Migrante
+        </span>
+      </h1>
+
+      <!-- LOGO CENTRADO DEBAJO -->
+      <img src="img/logo.png" class="w-48 md:w-56 drop-shadow-lg mt-6" alt="Logo Diputada Migrante">
+    </div>
+
+  </header>
+
+  <!-- ========================================================= -->
+  <!-- SLIDER GALERÍA -->
+  <!-- ========================================================= -->
+  <section id="galeria" class="section-transition py-16 px-6 md:px-20">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10">
+
+      <img id="slideImg" src="img/4.jpg"
+           class="w-full md:w-1/2 rounded-xl shadow-lg transition-opacity duration-300" alt="Galería" />
+
+      <div class="w-full md:w-1/2">
+        <h2 class="text-3xl font-bold mb-4 text-primary">Galería</h2>
+        <p id="slideText" class="text-lg">Descripción de la imagen 1.</p>
+
+        <div class="flex gap-4 mt-6">
+          <button id="prevBtn" class="btn-primary px-4 py-2 rounded-lg">Anterior</button>
+          <button id="nextBtn" class="btn-primary px-4 py-2 rounded-lg">Siguiente</button>
+        </div>
+
+        <div id="dots" class="flex gap-2 mt-4"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- VIDEO SECCIÓN -->
+  <!-- ========================================================= -->
+  <section class="section-transition py-16 px-6 md:px-20 bg-base-alt text-center">
+    <h2 class="text-3xl font-bold mb-6 text-primary">Video del Informe</h2>
+
+    <div class="max-w-4xl mx-auto">
+      <iframe class="w-full h-[300px] md:h-[500px] rounded-xl shadow-lg"
+              src="https://www.youtube.com/embed/VIDEO_ID"
+              allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <!-- ========================================================= -->
+  <!-- VERSIÓN ESTENOGRÁFICA -->
+  <!-- ========================================================= -->
+  <section class="section-transition py-16 px-6 md:px-20">
+    <h2 class="text-3xl font-bold mb-6 text-primary text-center">Versión Estenográfica</h2>
+
+    <div class="max-w-4xl mx-auto">
+      <iframe src="version-estenografica.pdf"
+              class="w-full h-[500px] rounded-xl shadow-lg"></iframe>
+
+      <a href="version-estenografica.pdf" download
+         class="btn-primary mt-6 inline-block px-6 py-3 rounded-lg">
+         Descargar PDF
+      </a>
+    </div>
+  </section>
+
+</body>
+</html>
